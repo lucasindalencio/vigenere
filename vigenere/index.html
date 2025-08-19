@@ -27,14 +27,28 @@
     </section>
 
     <section>
-      <h2>Funcionamento</h2>
-      <p>A Cifra de Vigenère aplica a ideia de deslocamento do alfabeto, mas de forma variável, utilizando uma palavra-chave. Cada letra da chave indica quantas posições deslocar no alfabeto.</p>
-      <p>Exemplo simplificado: se a chave é <b>"casa"</b> e a letra <b>"a"</b> aparece na mensagem, ela pode virar <b>"c"</b> em um ponto e <b>"s"</b> em outro, dependendo da posição da chave. Isso aumenta a segurança da cifra.</p>
-      <p>O processo é feito utilizando a chamada <b>Tabela de Vigenère</b>, que cruza as letras da mensagem com as da chave para determinar o resultado.</p>
-       <figure>
-                <img src="Vigenère_square_shading.svg.png" alt="Tabela da Cifra de Vigenère">
-            </figure>
-    </section>
+  <h2>Funcionamento</h2>
+  <p>A Cifra de Vigenère aplica a ideia de deslocamento do alfabeto, mas de forma variável, utilizando uma palavra-chave. Cada letra da chave indica quantas posições deslocar no alfabeto.</p>
+  <p>Exemplo simplificado: se a chave é <b>"casa"</b> e a letra <b>"a"</b> aparece na mensagem, ela pode virar <b>"c"</b> em um ponto e <b>"s"</b> em outro, dependendo da posição da chave. Isso aumenta a segurança da cifra.</p>
+  <p>O processo é feito utilizando a chamada <b>Tabela de Vigenère</b>, que cruza as letras da mensagem com as da chave para determinar o resultado.</p>
+  
+  <figure>
+    <img src="Vigenère_square_shading.svg.png" alt="Tabela da Cifra de Vigenère">
+    <figcaption>Exemplo da Tabela de Vigenère.</figcaption>
+  </figure>
+
+  <!-- Ilustração do alinhamento da chave -->
+<h3>Exemplo de alinhamento</h3>
+<div class="vigenere-exemplo">
+  <div class="linha">
+    <span>M</span><span>E</span><span>N</span><span>S</span><span>A</span><span>G</span><span>E</span><span>M</span>
+  </div>
+  <div class="linha">
+    <span>C</span><span>H</span><span>A</span><span>V</span><span>E</span><span>C</span><span>H</span><span>A</span>
+  </div>
+</div>
+<p>Assim, cada letra da mensagem é "casada" com a letra da chave correspondente.</p>
+</section>
     <!-- ============================================= -->
 
     <!-- Codificador (mantido igual ao seu) -->
