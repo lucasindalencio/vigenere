@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  background-color: #19191a;
+  background-color: #1f1f1f;
   padding: 20px;
   border-radius: 8px;
   width: 600px;
@@ -70,4 +70,27 @@ figure img {
   max-width: 100%;
   height: auto;
   border: 1px solid #60d4ea;
+}
+
+.vigenere-exemplo {
+  color: #020202;
+  font-size: 1.5rem;
+  font-family: monospace;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.linha {
+  display: flex;
+  justify-content: center; /* centraliza as letras */
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.linha span {
+  display: inline-block;
+  width: 25px;
 }
