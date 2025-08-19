@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifra de Vigenere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cifra de Vigenere</h1>
+
+    <!-- ================== Textos ================== -->
+    <section>
+      <h2>História</h2>
+      <p>Inventada por Giovan Battista Bellaso por volta de 1553, mas ficou erroneamente conhecida por ter sido atribuída a Blaise de Vigenère séculos depois.</p>
+      <p>Conhecida como "le chiffre indéchiffrable" (a cifra indecifrável), foi considerada por muito tempo inquebrável, um dos métodos de criptografia mais seguros da época.</p>
+      <p>Permaneceu sem solução por mais de 200 anos, até que o método de quebra foi publicado por Charles Babbage, por volta de 1854.</p>
+      <p>Ataques modernos utilizam o Teste de Kasiski e o índice de coincidência para determinar o tamanho da chave.</p>
+    </section>
+
+    <section>
+      <h2>Importância</h2>
+      <p>Diferente da Cifra de César, que usa um único deslocamento para toda a mensagem, a Cifra de Vigenère usa múltiplos deslocamentos, dependendo de uma palavra-chave.</p>
+      <p>Cada letra da palavra-chave corresponde a um deslocamento diferente. Isso faz com que uma mesma letra do texto original possa ser criptografada como letras diferentes no texto cifrado.</p>
+      <p>Essa característica impede a aplicação da análise de frequência, um método comum para quebrar cifras de substituição simples, já que a frequência das letras no texto cifrado não corresponde mais à frequência esperada no idioma original.</p>
+    </section>
+
+    <section>
+      <h2>Funcionamento</h2>
+      <p>A Cifra de Vigenère aplica a ideia de deslocamento do alfabeto, mas de forma variável, utilizando uma palavra-chave. Cada letra da chave indica quantas posições deslocar no alfabeto.</p>
+      <p>Exemplo simplificado: se a chave é <b>"casa"</b> e a letra <b>"a"</b> aparece na mensagem, ela pode virar <b>"c"</b> em um ponto e <b>"s"</b> em outro, dependendo da posição da chave. Isso aumenta a segurança da cifra.</p>
+      <p>O processo é feito utilizando a chamada <b>Tabela de Vigenère</b>, que cruza as letras da mensagem com as da chave para determinar o resultado.</p>
+       <figure>
+                <img src="Vigenère_square_shading.svg.png" alt="Tabela da Cifra de Vigenère">
+            </figure>
+    </section>
+    <!-- ============================================= -->
+
+    <!-- Codificador (mantido igual ao seu) -->
+    <label for="chave">Palavra-chave:</label>
+    <input type="text" id="chave">
+
+    <div class="sections">
+      <div class="section">
+        <h2>Codificação</h2>
+        <label for="texto">Texto original:</label>
+        <textarea id="texto" rows="4"></textarea>
+        <button onclick="codificar()">Codificar</button>
+
+        <label for="resultado">Texto codificado:</label>
+        <textarea id="resultado" rows="4" readonly></textarea>
+      </div>
+
+        <button onclick="decodificar()">Decodificar</button>
+
+        <label for="resultadoDecodificado">Texto decodificado:</label>
+        <textarea id="resultadoDecodificado" rows="4" readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
